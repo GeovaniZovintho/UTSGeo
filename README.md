@@ -1,3 +1,5 @@
+link github https://github.com/GeovaniZovintho/UTSGeo.git
+
 Cara Mengatur Database:
 1.	Instalasi MySQL2
 Instal paket mysql2 melalui terminal dengan perintah: npm install mysql2
