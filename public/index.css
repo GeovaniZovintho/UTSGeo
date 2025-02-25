@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,24 +5,22 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Body */
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: #b3e0ff;
-    /* Biru muda */
+
 }
 
-/* Container */
 .container {
     width: 100%;
     max-width: 400px;
     text-align: center;
 }
 
-/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -44,7 +41,6 @@ nav button:hover {
     background: #0056b3;
 }
 
-/* Logout button */
 .logout {
     background: #e63946 !important;
 }
@@ -53,7 +49,6 @@ nav button:hover {
     background: #c92a2a !important;
 }
 
-/* Card (Kotak Tengah) */
 .card {
     background: white;
     padding: 20px;
@@ -65,7 +60,6 @@ nav button:hover {
     animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Forms */
 form {
     display: flex;
     flex-direction: column;
@@ -82,7 +76,6 @@ button {
     font-size: 14px;
 }
 
-/* Button */
 button {
     background: #23d160;
     color: white;
@@ -94,7 +87,6 @@ button:hover {
     background: #20bc56;
 }
 
-/* Links */
 .link {
     margin-top: 10px;
     font-size: 14px;
@@ -106,12 +98,10 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Pages */
 .page {
     display: none;
 }
 
-/* Task List */
 #taskList {
     margin-top: 20px;
     list-style: none;
@@ -138,7 +128,6 @@ button:hover {
     background: #c92a2a;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;

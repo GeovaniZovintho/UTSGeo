@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    showPage("login"); // Default ke halaman login saat pertama kali dibuka
+    showPage("login"); 
     loadTasks();
 });
 
@@ -8,7 +8,7 @@ function showPage(pageId) {
     document.getElementById(pageId + "Page").style.display = "block";
 }
 
-// Register User
+
 async function register() {
     const username = document.getElementById("regUsername").value;
     const password = document.getElementById("regPassword").value;
@@ -32,7 +32,7 @@ async function register() {
 
         if (response.ok) {
             alert("✅ Registrasi berhasil! Silakan login.");
-            showPage("login"); // Pindah ke halaman login
+            showPage("login"); 
         } else {
             alert("⚠️ " + (data.message || "Registrasi gagal."));
         }
@@ -42,7 +42,6 @@ async function register() {
     }
 }
 
-// Login User
 function login() {
     const username = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
@@ -65,13 +64,13 @@ function login() {
     .catch(err => console.error(err));
 }
 
-// Logout
+
 function logout() {
     localStorage.removeItem("token");
     showPage("login");
 }
 
-// Tambah Task
+
 function addTask() {
     const title = document.getElementById("taskTitle").value;
     const category = document.getElementById("taskCategory").value;
@@ -91,7 +90,6 @@ function addTask() {
     .catch(err => console.error(err));
 }
 
-// Load Semua Task
 function loadTasks() {
     const token = localStorage.getItem("token");
     
@@ -116,7 +114,7 @@ function loadTasks() {
     .catch(err => console.error(err));
 }
 
-// Edit Task
+
 function editTask(id, title, category, deadline, status) {
     const newTitle = prompt("Judul baru:", title);
     const newCategory = prompt("Kategori baru (Kuliah/Organisasi/Pribadi):", category);
@@ -138,7 +136,7 @@ function editTask(id, title, category, deadline, status) {
     }
 }
 
-// Hapus Task
+
 function deleteTask(id) {
     const token = localStorage.getItem("token");
 
