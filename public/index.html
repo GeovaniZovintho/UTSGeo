@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <!-- Register Page -->
+            <div id="registerPage" class="page">
+                <h2>Register</h2>
+                <form>
+                    <input type="text" id="regUsername" placeholder="Username">
+                    <input type="password" id="regPassword" placeholder="Password">
+                    <button type="button" onclick="register()">Register</button>
+                    <p class="link" onclick="showPage('login')">Sudah punya akun? Login</p>
+                </form>
+            </div>
+
+            <!-- Login Page -->
+            <div id="loginPage" class="page">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" id="loginUsername" placeholder="Username">
+                    <input type="password" id="loginPassword" placeholder="Password">
+                    <button type="button" onclick="login()">Login</button>
+                    <p class="link" onclick="showPage('register')">Belum punya akun? Register</p>
+                </form>
+            </div>
+
+            <!-- Tasks Page -->
+            <div id="tasksPage" class="page">
+                <nav>
+                    <button class="logout" onclick="logout()">Logout</button>
+                </nav>
+                <h2>Daftar Tugas</h2>
+                <form>
+                    <input type="text" id="taskTitle" placeholder="Judul Tugas">
+                    <select id="taskCategory">
+                        <option value="Kuliah">Kuliah</option>
+                        <option value="Organisasi">Organisasi</option>
+                        <option value="Pribadi">Pribadi</option>
+                    </select>
+                    <input type="date" id="taskDeadline">
+                    <button type="button" onclick="addTask()">Tambah Tugas</button>
+                </form>
+
+                <ul id="taskList"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

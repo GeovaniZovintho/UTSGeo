@@ -3,8 +3,7 @@ const Task = require('../models/taskModel');
 const taskController = {
     createTask: async (req, res) => {
         const { title, category, deadline, status } = req.body;
-        const userId = req.user.id; // Harus ada middleware autentikasi yang menetapkan req.user.id
-
+        const userId = req.user.id; 
         try {
             const taskId = await Task.create(userId, title, category, deadline, status);
             res.status(201).json({ taskId, message: 'Task created successfully' });
